@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'SEGA2';
+  font-style: normal;
+  font-weight: normal;
+  src: url('Death_Star.otf') format('opentype');
+  /* src: url('Starjedi.ttf') format('truetype'); */
+}
+
+h1 {
+  font-family: 'SEGA2';
+  font-weight: 200;
+  color: #0ccac4;
+}
