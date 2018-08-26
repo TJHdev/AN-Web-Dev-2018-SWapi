@@ -3,4 +3,5 @@ body {
   padding: 0;
   font-family: 'SWFont';
   background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0,128,128,1) 100%);
+  letter-spacing: 2px;
 }

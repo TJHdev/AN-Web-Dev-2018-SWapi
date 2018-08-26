@@ -1,0 +1,27 @@
+.displayeditem__container {
+  color: #ffd700;
+  table-layout: fixed;
+
+}
+
+td {
+  border: 1px solid grey;
+  word-wrap: break-word;
+}
+
+.displayeditem__row {
+  background-image: linear-gradient(to right, rgba(8, 0, 31, 0.1), black);
+}
+
+.displayeditem__key {
+  max-width: 200px;
+  min-width: 200px;
+  
+  /* color: green; */
+}
+
+.displayeditem__value {
+  max-width: 600px;
+  min-width: 600px;
+  /* color: grey; */
+}

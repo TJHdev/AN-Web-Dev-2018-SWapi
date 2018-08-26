@@ -46,8 +46,10 @@ class App extends Component {
       <Navbar />
       <Scroll>
         <ErrorBoundary>
-          <ItemList robots={filteredRobots} data={data} isPendingData={isPendingData} />
-          <DisplayedItem />
+          <div className="information__container">
+            <ItemList robots={filteredRobots} data={data} isPendingData={isPendingData} />
+            <DisplayedItem />
+          </div>
         </ErrorBoundary>
       </Scroll>
     </div>

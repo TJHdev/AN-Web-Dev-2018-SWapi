@@ -9,5 +9,16 @@
 h1 {
   font-family: 'SWFont';
   font-weight: 200;
-  color: #0ccac4;
+  color: #ffd700;
+}
+
+.information__container {
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll__container {
+  display: flex;
+  justify-content: center;
 }

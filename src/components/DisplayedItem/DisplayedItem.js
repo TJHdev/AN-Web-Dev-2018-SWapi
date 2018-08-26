@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './DisplayedItem.css'
 
 const mapStateToProps = (state) => {
   return {
@@ -18,9 +19,13 @@ class DisplayedItem extends Component {
       console.log()
 
       return (
-        <div>
-          {Object.entries(itemToDisplay)}
-        </div>
+        <table className="displayeditem__container">
+          <tbody>
+            {Object.entries(itemToDisplay).map((pair) => {
+              return <tr className="displayeditem__row"><td className="displayeditem__key">{pair[0]}</td><td className="displayeditem__value">{pair[1]}</td></tr>
+            })}
+          </tbody>
+        </table>
       );
     }
 
