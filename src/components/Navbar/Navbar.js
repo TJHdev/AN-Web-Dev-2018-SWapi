@@ -26,5 +26,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchData: (button) => dispatch(requestStarwarsData(button))
 });
 
-
 export default connect(undefined, mapDispatchToProps)(Navbar)

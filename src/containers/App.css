@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'SEGA2';
+  font-family: 'SWFont';
   font-style: normal;
   font-weight: normal;
   src: url('Death_Star.otf') format('opentype');
@@ -7,7 +7,7 @@
 }
 
 h1 {
-  font-family: 'SEGA2';
+  font-family: 'SWFont';
   font-weight: 200;
   color: #0ccac4;
 }

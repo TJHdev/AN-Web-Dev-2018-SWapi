@@ -4,13 +4,14 @@ import ItemList from '../components/ItemList/ItemList';
 import Scroll from '../components/Scroll';
 import Navbar from '../components/Navbar/Navbar';
 import ErrorBoundary from '../components/ErrorBoundary';
+import DisplayedItem from '../components/DisplayedItem/DisplayedItem';
 import './App.css';
 
 import { setSearchField, requestRobots } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
-    data: state.requestData.listItems,
+    data: state.requestData.data,
     isPendingData: state.requestData.isPendingData,
     searchField: state.searchRobots.searchField,
     robots: state.requestRobots.robots,
@@ -33,19 +34,20 @@ class App extends Component {
   }
 
   render() {
-    const { searchField, robots, isPending } = this.props;
+    const { searchField, robots, isPending, data, isPendingData } = this.props;
     const filteredRobots = robots.filter((robot) => { 
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
     });
     return isPending ? (
-    <h1>Loading</h1>
+      <h1>Loading</h1>
     ) : (
       <div className="tc">
       <h1 className="f2">Starwars API App</h1>
       <Navbar />
       <Scroll>
         <ErrorBoundary>
-          <ItemList robots={filteredRobots} />
+          <ItemList robots={filteredRobots} data={data} isPendingData={isPendingData} />
+          <DisplayedItem />
         </ErrorBoundary>
       </Scroll>
     </div>
